@@ -2,6 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import SayHello from './components/SayHello';
 import SecondHello from './components/SecondHello';
+import Allavatar from './components/Allavatar';
+import SignIn from './components/SignIn';
+import Badge from './components/Badge';
 
-ReactDOM.render(<SayHello />, document.getElementById('app'));
-ReactDOM.render(<SecondHello />, document.getElementById('app2'));
+function App() {
+    return ( <>
+        <SayHello />
+        
+        <SecondHello/>
+        <Allavatar/>
+        <SignIn/>
+        <Badge />
+
+        </> )
+  }
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
