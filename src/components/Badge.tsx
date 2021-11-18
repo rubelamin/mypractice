@@ -22,14 +22,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
 }));
 
-const [count, setCount] = React.useState(1);
-    const [invisible, setInvisible] = React.useState(false);
+
+
+export default function() {
+    const [count, setCount] = React.useState(1);
+const [invisible, setInvisible] = React.useState(false);
 
     const handleBadgeVisibility = () => {
         setInvisible(!invisible);
     };
-
-export default function() {
     return <>
     <p>Badge Output Here</p>
     <Stack direction="row" spacing={2}>
@@ -63,7 +64,37 @@ export default function() {
         }}
     >
         <div>
-            
+            <Badge color="secondary" badgeContent={count} >
+                <MailIcon />
+            </Badge>
+            <ButtonGroup>
+                <Button
+                    aria-label="reduce"
+                    onClick={() => {
+                        setCount(Math.max(count - 1, 0));
+                    }}
+                >
+                <RemoveIcon fontSize="small" />
+                </Button>
+                <Button
+                 aria-label="increase"
+                 onClick={() => {
+                     setCount(count + 1);
+                 }}
+                >
+                <AddIcon fontSize="small" />
+                </Button>
+            </ButtonGroup>
+        </div>
+        <div>
+            <Badge color="secondary" variant="dot" invisible={invisible}>
+                 <MailIcon />
+            </Badge>
+            <FormControlLabel 
+                sx ={{ color : 'text.primary'}}
+                control={<Switch checked={!invisible} onChange={handleBadgeVisibility} />}
+                label="Show Badge"
+            />
         </div>
 
     </Box>
