@@ -6,7 +6,7 @@ import { green, red, orange } from '@mui/material/colors';
 export default function () {
     return <>
         <Box mt={2}>
-            <Typhography sx={{ bgcolor: green[500] }}>
+            <Typhography sx={{ bgcolor: green[500], color: red[900] }}>
                 Bangladesh
             </Typhography>
             <Typhography sx={{ color: red[500] }}>

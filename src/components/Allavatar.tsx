@@ -70,7 +70,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function() {
     return <> 
-     <h2> Sign In</h2>
+     <h2> Avatar</h2>
         <p>User Name</p>
         <Stack direction="row" spacing={2}>
         <Avatar alt="First User" src="https://cdn.lifehack.org/wp-content/uploads/2015/08/chrishemsworth.jpg" />
