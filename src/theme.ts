@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { orange, grey, blue, green } from '@mui/material/colors';
+import { orange, grey, red, green } from '@mui/material/colors';
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -16,7 +16,7 @@ declare module '@mui/material/styles' {
 export const refflyTheme = {
   palette: {
     primary: {
-      main: blue[800],
+      main: red[800],
     },
     secondary: {
       main: grey[800],

@@ -16,11 +16,13 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+import { ThemeProvider} from '@mui/material/styles';
+import { defaultTheme } from './theme';
 
 function App() {
   
     return ( <>
-      <React.Fragment>
+      <ThemeProvider theme ={ defaultTheme }>
         <CssBaseline />
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
@@ -123,7 +125,7 @@ function App() {
           <p>Copyright © Tbazar 2021.</p>
         </Box>
       </Container>
-      </React.Fragment>
+      </ThemeProvider>
   
 
 
