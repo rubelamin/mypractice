@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
-function Navbar() {
+
+
+export default function Navbar() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
 
@@ -14,5 +18,3 @@ function Navbar() {
         </div>
     </>
 }
-
-export default Navbar;
