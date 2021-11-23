@@ -41,11 +41,16 @@ export default function SignIn() {
       <ThemeProvider theme={theme}>
          <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Box sx={{ 
+               marginTop: 8, 
+               display: 'flex', 
+               flexDirection: 'column', 
+               alignItems: 'center',
+               }}>
                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                   <LockOutlinedIcon />
                </Avatar>
-               <Typhography component="h1" variant="h5">
+               <Typhography component="h1" variant="h5" color="fontColor.paper">
                   Sign In
                </Typhography>
                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt:1 }}>

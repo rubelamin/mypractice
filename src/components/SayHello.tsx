@@ -7,7 +7,7 @@ import { defaultTheme } from '../theme';
 export default function() {
     return <>
         <ThemeProvider theme = { defaultTheme } >
-            <Typhography variant="h3">
+            <Typhography variant="h3" color="fontColor.paper">
                 Hello Bagha vai!
             </Typhography>
         </ThemeProvider>

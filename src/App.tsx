@@ -39,7 +39,7 @@ function App() {
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex'} }}>
               
-              <Link href="/" color="inherit">Home</Link>
+              <Link href="/" color="secondary.dark">Home</Link>
               <Link href="#" color="inherit">Link</Link>
             </Box>
             
@@ -53,7 +53,7 @@ function App() {
         <Box sx={{ 
           display: 'flex', 
           flexDirection: 'column',
-          bgcolor: '#cfe8fc',
+          bgcolor: 'background.deepPurple',
           maxWidth: { md: 200 },
           padding: 2,
           boxShadow: 1,
@@ -65,7 +65,7 @@ function App() {
         </Box>
 
         <Box sx={{ 
-          bgcolor: 'background.paper',
+          bgcolor: 'background.indigo',
           maxWidth: { md: 250 },
           padding: 2,
           boxShadow: 1,
@@ -76,7 +76,7 @@ function App() {
         </Box>
 
         <Box sx={{ 
-          bgcolor: '#dddddd',
+          bgcolor: 'background.blue',
           maxWidth: { md: 250 },
           padding: 2,
           boxShadow: 1,
@@ -87,7 +87,7 @@ function App() {
         </Box>
 
         <Box sx={{ 
-          bgcolor: '#dddddd',
+          bgcolor: 'background.teal',
           maxWidth: { md: 460 },
           padding: 2,
           boxShadow: 1,
@@ -99,7 +99,7 @@ function App() {
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, }}>
         <Box sx={{ 
-          bgcolor: '#dddddd',
+          bgcolor: 'background.cyan',
           maxWidth: { md: 360 },
           padding: 2,
           boxShadow: 1,
@@ -110,7 +110,7 @@ function App() {
         </Box>
 
         <Box sx={{ 
-          bgcolor: '#dddddd',
+          bgcolor: 'background.lightGreen',
           maxWidth: { md: 200 },
           padding: 2,
           boxShadow: 1,
