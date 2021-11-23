@@ -33,7 +33,7 @@ export const refflyTheme = {
     },
     background: {
       default: '#ECEFF1',
-      paper: grey[100],
+      paper: grey[200],
     },
   },
   typography: {
