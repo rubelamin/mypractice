@@ -11,21 +11,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typhography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { defaultTheme } from '../theme';
 
-function Copyright(props: any) {
-   return <> 
-      <Typhography variant="body2" color="text.secondary" align="center" {...props}>
-         {'Copyright © '}
-         <Link color="inherit" href="https://tangailbazar.com">
-            Tbazar
-         </Link>{' '}
-         {new Date().getFullYear()}
-         {'.'}
-      </Typhography>
-   </>
-}
-const theme = createTheme();
 
 export default function SignIn() {
    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -38,7 +26,7 @@ export default function SignIn() {
    };
    return <>
       <p>Sign In Page</p>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={ defaultTheme }>
          <Container component="main" maxWidth="xs">
             <CssBaseline />
             <Box sx={{ 
@@ -46,11 +34,12 @@ export default function SignIn() {
                display: 'flex', 
                flexDirection: 'column', 
                alignItems: 'center',
+               color: 'fontColor.paper',
                }}>
                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                   <LockOutlinedIcon />
                </Avatar>
-               <Typhography component="h1" variant="h5" color="fontColor.paper">
+               <Typhography component="h1" variant="h5" sx={{ color: 'fontColor.paper' }}>
                   Sign In
                </Typhography>
                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt:1 }}>
@@ -83,12 +72,12 @@ export default function SignIn() {
                   </Button>
                   <Grid container>
                      <Grid item xs>
-                        <Link href="#" variant="body2">
+                        <Link href="#" variant="body2" sx={{ color: 'fontColor.paper' }}>
                            Forgot Password?
                         </Link>
                      </Grid>
                      <Grid item>
-                        <Link href="#" variant="body2">
+                        <Link href="#" variant="body2" sx={{ color: 'fontColor.paper' }}>
                            {"Don't have an account? Sign Up"}
                         </Link>
                      </Grid>
@@ -96,7 +85,7 @@ export default function SignIn() {
                </Box>
 
             </Box>
-            <Copyright sx={{ mt: 8, mb: 4}} />
+         
          </Container>
       </ThemeProvider>
    </>

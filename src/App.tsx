@@ -6,6 +6,7 @@ import Allavatar from './components/Allavatar';
 import SignIn from './components/SignIn';
 import Badge from './components/Badge';
 import AllCom from './components/AllCom';
+import Fab from './components/Fab';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -25,7 +26,7 @@ function App() {
       <ThemeProvider theme ={ defaultTheme }>
         <CssBaseline />
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" sx={{ bgcolor: 'background.pink' }}>
           <Toolbar>
             <IconButton 
             size="large" aria-label="open drawer" edge="start" color="inherit" sx={{ mr: 2}}>
@@ -70,6 +71,7 @@ function App() {
           padding: 2,
           boxShadow: 1,
           mr: 1,
+          color: 'fontColor.deepOrange',
            }}
            >
          <SecondHello/>
@@ -81,6 +83,7 @@ function App() {
           padding: 2,
           boxShadow: 1,
           mr: 1,
+          color: 'fontColor.deepPurple',
           }}
           >
          <Allavatar/>
@@ -92,6 +95,7 @@ function App() {
           padding: 2,
           boxShadow: 1,
           mr: 1,
+          color: 'fontColor.paper',
           }}
           >
          <SignIn/>
@@ -119,7 +123,16 @@ function App() {
            >
          <AllCom />
         </Box>
-        </Box>
+          <Box sx={{
+            bgcolor: 'Background.blueGrey',
+            boxShadow: 1,
+            padding: 1,
+          }}>
+            <Fab />
+          </Box>
+
+
+      </Box>
 
         <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, }}>
           <p>Copyright © Tbazar 2021.</p>
