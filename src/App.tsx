@@ -7,6 +7,7 @@ import SignIn from './components/SignIn';
 import Badge from './components/Badge';
 import AllCom from './components/AllCom';
 import Fab from './components/Fab';
+import Ratingall from './components/Ratingall';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -124,11 +125,19 @@ function App() {
          <AllCom />
         </Box>
           <Box sx={{
-            bgcolor: 'Background.blueGrey',
+            bgcolor: 'background.blueGrey',
             boxShadow: 1,
             padding: 1,
           }}>
             <Fab />
+          </Box>
+
+          <Box sx={{
+            bgcolor: 'Background.lime',
+            boxShadow: 1,
+            padding:1,
+          }}> 
+            <Ratingall />
           </Box>
 
 

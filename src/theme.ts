@@ -80,6 +80,7 @@ export const refflyTheme = {
 
     },
     fontColor: {
+      main: grey[900],
       paper: grey[200],
         red: red[800],
         pink: '#e91e63',

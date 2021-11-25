@@ -11,8 +11,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typhography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { ThemeProvider } from '@mui/material/styles';
-import { defaultTheme } from '../theme';
 
 
 export default function SignIn() {
@@ -26,9 +24,9 @@ export default function SignIn() {
    };
    return <>
       <p>Sign In Page</p>
-      <ThemeProvider theme={ defaultTheme }>
+
          <Container component="main" maxWidth="xs">
-            <CssBaseline />
+           
             <Box sx={{ 
                marginTop: 8, 
                display: 'flex', 
@@ -87,6 +85,6 @@ export default function SignIn() {
             </Box>
          
          </Container>
-      </ThemeProvider>
+      
    </>
 }
