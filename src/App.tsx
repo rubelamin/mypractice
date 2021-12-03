@@ -9,6 +9,7 @@ import AllCom from './components/AllCom';
 import Fab from './components/Fab';
 import Ratingall from './components/Ratingall';
 import HeaderBars from './components/HeaderBars';
+import AlertInfo from './components/Alert';
 
 
 import Box from '@mui/material/Box';
@@ -24,7 +25,7 @@ function App() {
       <ThemeProvider theme ={ defaultTheme }>
         <CssBaseline />
           <Box >
-            <HeaderBars />
+              <HeaderBars />
           </Box>
 
       <Container >
@@ -132,6 +133,9 @@ function App() {
             <Ratingall />
           </Box>
         </Grid>
+        <Grid item xs={12} md={6} sx={{ bgcolor: 'fontColor.paper' }}>
+            <AlertInfo />
+          </Grid>
       </Grid>
       </Box>
       

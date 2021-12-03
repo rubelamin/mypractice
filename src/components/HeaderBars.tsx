@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -39,6 +40,7 @@ export default function(){
               >
                 RBL Practice
               </Typography>
+                
               </Box>
               
               <Typography component="div" variant="h6" noWrap
