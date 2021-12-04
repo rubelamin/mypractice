@@ -10,6 +10,7 @@ import Fab from './components/Fab';
 import Ratingall from './components/Ratingall';
 import HeaderBars from './components/HeaderBars';
 import AlertInfo from './components/Alert';
+import Drawer from './components/Drawer';
 
 
 import Box from '@mui/material/Box';
@@ -135,6 +136,7 @@ function App() {
         </Grid>
         <Grid item xs={12} md={6} sx={{ bgcolor: 'fontColor.paper' }}>
             <AlertInfo />
+            <Drawer />
           </Grid>
       </Grid>
       </Box>
