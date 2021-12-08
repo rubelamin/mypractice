@@ -11,12 +11,14 @@ import Ratingall from './components/Ratingall';
 import HeaderBars from './components/HeaderBars';
 import AlertInfo from './components/Alert';
 import Drawer from './components/Drawer';
+import Dashmenu from './components/Dashmenu';
 
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
 import { ThemeProvider} from '@mui/material/styles';
 import { defaultTheme } from './theme';
 
@@ -24,128 +26,133 @@ function App() {
   
     return ( <>
       <ThemeProvider theme ={ defaultTheme }>
-        <CssBaseline />
-          <Box >
-              <HeaderBars />
-          </Box>
+        <Box sx={{
+          display: 'flex',
+        }}>
+          <CssBaseline />
+              <HeaderBars />    
+              <Dashmenu />
+          <Box component="main" sx={{ flexGrow: 1, p: 3,}}>
+            <Toolbar />
+            <Container >
+              <Box sx={{ display: 'flex', flexDirection: 'row', }}>
 
-      <Container >
-        <Box sx={{ display: 'flex', flexDirection: 'row', }}>
+              <Grid container spacing={1}>
 
-        <Grid container spacing={1}>
+                <Grid item xs={12} md={2}>
+                  <Box sx={{ 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    bgcolor: 'background.deepPurple',
+                    padding: 2,
+                    boxShadow: 1,
+                    
+                    }}
+                    
+                    >
+                    <SayHello />
+                  </Box>
+                </Grid>
 
-          <Grid item xs={12} md={2}>
-            <Box sx={{ 
-              display: 'flex', 
-              flexDirection: 'column',
-              bgcolor: 'background.deepPurple',
-              padding: 2,
-              boxShadow: 1,
-              
-              }}
-              
-              >
-              <SayHello />
+                <Grid item xs={12} md={3}>
+                  <Box sx={{ 
+                    bgcolor: 'background.indigo',
+                    
+                    padding: 2,
+                    boxShadow: 1,
+                    
+                    color: 'fontColor.deepOrange',
+                    }}
+                    >
+                    <SecondHello/>
+                  </Box>
+                </Grid>
+
+              <Grid item xs={12} md={3}>
+                <Box sx={{ 
+                  bgcolor: 'background.blue',
+                  
+                  padding: 2,
+                  boxShadow: 1,
+                  
+                  color: 'fontColor.deepPurple',
+                  }}
+                  >
+                <Allavatar/>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={4}>
+                <Box sx={{ 
+                  bgcolor: 'background.teal',
+                  
+                  padding: 2,
+                  boxShadow: 1,
+                  
+                  color: 'fontColor.paper',
+                  }}
+                  >
+                  <SignIn/>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={3}>
+                <Box sx={{ 
+                  bgcolor: 'background.cyan',
+                  
+                  padding: 2,
+                  boxShadow: 1,
+                  
+                  }}
+                  >
+                  <Badge />
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={3}>
+                <Box sx={{ 
+                  bgcolor: 'background.lightGreen',
+                  
+                  padding: 2,
+                  boxShadow: 1,
+                  
+                  }}
+                  >
+                  <AllCom />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box sx={{
+                  bgcolor: 'background.blueGrey',
+                  boxShadow: 1,
+                  padding: 1,
+                  }}>
+                  <Fab />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={2}>
+                <Box sx={{
+                  bgcolor: 'Background.lime',
+                  boxShadow: 1,
+                  padding:1,
+                }}> 
+                  <Ratingall />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6} sx={{ bgcolor: 'fontColor.paper' }}>
+                  <AlertInfo />
+                  <Drawer />
+                </Grid>
+            </Grid>
             </Box>
-          </Grid>
+            
 
-          <Grid item xs={12} md={3}>
-            <Box sx={{ 
-              bgcolor: 'background.indigo',
-              
-              padding: 2,
-              boxShadow: 1,
-              
-              color: 'fontColor.deepOrange',
-              }}
-              >
-              <SecondHello/>
-            </Box>
-          </Grid>
-
-        <Grid item xs={12} md={2}>
-          <Box sx={{ 
-            bgcolor: 'background.blue',
-            
-            padding: 2,
-            boxShadow: 1,
-            
-            color: 'fontColor.deepPurple',
-            }}
-            >
-           <Allavatar/>
+              <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, }}>
+                <p>Copyright © Tbazar 2021.</p>
+              </Box>
+            </Container>
           </Box>
-        </Grid>
-
-        <Grid item xs={12} md={5}>
-          <Box sx={{ 
-            bgcolor: 'background.teal',
-            
-            padding: 2,
-            boxShadow: 1,
-            
-            color: 'fontColor.paper',
-            }}
-            >
-            <SignIn/>
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={3}>
-          <Box sx={{ 
-            bgcolor: 'background.cyan',
-            
-            padding: 2,
-            boxShadow: 1,
-            
-            }}
-            >
-            <Badge />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={3}>
-          <Box sx={{ 
-            bgcolor: 'background.lightGreen',
-            
-            padding: 2,
-            boxShadow: 1,
-            
-            }}
-            >
-            <AllCom />
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{
-            bgcolor: 'background.blueGrey',
-            boxShadow: 1,
-            padding: 1,
-            }}>
-            <Fab />
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <Box sx={{
-            bgcolor: 'Background.lime',
-            boxShadow: 1,
-            padding:1,
-           }}> 
-            <Ratingall />
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6} sx={{ bgcolor: 'fontColor.paper' }}>
-            <AlertInfo />
-            <Drawer />
-          </Grid>
-      </Grid>
       </Box>
-      
-
-        <Box sx={{ display: 'flex', flexDirection: 'row', mt: 2, }}>
-          <p>Copyright © Tbazar 2021.</p>
-        </Box>
-      </Container>
       </ThemeProvider>
   
 

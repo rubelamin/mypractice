@@ -27,7 +27,10 @@ export default function(){
   };
 
     return <>
-        <AppBar position="static" sx={{ bgcolor: 'background.pink' }}>
+        <AppBar position="fixed" sx={{ 
+          bgcolor: 'background.pink',
+           zIndex: (theme) => theme.zIndex.drawer + 1,
+           }}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Box sx={{ flexGrow: 1, display: 'flex', }}>
