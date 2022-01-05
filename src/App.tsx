@@ -12,6 +12,7 @@ import HeaderBars from './components/HeaderBars';
 import AlertInfo from './components/Alert';
 import Drawer from './components/Drawer';
 import Dashmenu from './components/Dashmenu';
+import Dashboard from './components/Dashboard';
 
 
 import Box from '@mui/material/Box';
@@ -37,7 +38,11 @@ function App() {
             <Container >
               <Box sx={{ display: 'flex', flexDirection: 'row', }}>
 
+              
               <Grid container spacing={1}>
+                <Grid item xs={12}>
+                  <Dashboard />
+                </Grid>
 
                 <Grid item xs={12} md={2}>
                   <Box sx={{ 
