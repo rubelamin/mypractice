@@ -13,6 +13,11 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import GroupIcon from '@mui/icons-material/Group';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import Divider from '@mui/material/Divider';
 
 function createData(
     name: string,
@@ -119,24 +124,95 @@ export default function(){
         
         <Grid container spacing={1}>
             <Grid item xs={12} md={3}>
-                <Paper>
-                    Total Users
+                <Paper sx={{ bgcolor: 'success.main', textAlign: 'center', p: 2, alignContent: 'center' }}>
+                    <Box sx={{ 
+                        background: 'linear-gradient(135deg, rgba(0, 123, 85, 0) 0%, rgba(0, 123, 85, 0.24) 100%)',
+                        height: '64px',
+                        width: '64px',
+                        borderRadius: '50%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex',
+                        m: 'auto'
+                    }}>
+                        <VisibilityIcon sx={{ color: 'success.dark' }} />
+                    </Box>
+                    <Typography component="div" variant="h3" color="success.dark">
+                        750K
+                    </Typography>
+                    <Typography component="div" variant="h6" color="success.dark">
+                        Weekly Visits
+                    </Typography>
                 </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Paper>
-                    Total Users
+                <Paper sx={{ bgcolor: 'secondary.thin', textAlign: 'center', p: 2, alignContent: 'center' }}>
+                    <Box sx={{ 
+                        background: 'linear-gradient(135deg, rgba(0, 123, 85, 0) 0%, rgba(0, 123, 85, 0.24) 100%)',
+                        height: '64px',
+                        width: '64px',
+                        borderRadius: '50%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex',
+                        m: 'auto'
+                    }}>
+                        <GroupIcon sx={{ color: 'secondary.thincolor' }} />
+                    </Box>
+                    <Typography component="div" variant="h3" color="secondary.thincolor">
+                        50K
+                    </Typography>
+                    <Typography component="div" variant="h6" color="secondary.thincolor">
+                        Total Users
+                    </Typography>
                 </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Paper>
-                    Total Users
+                <Paper sx={{ bgcolor: 'warning.thin', textAlign: 'center', p: 2, alignContent: 'center' }}>
+                    <Box sx={{ 
+                        background: 'linear-gradient(135deg, rgba(0, 123, 85, 0) 0%, rgba(0, 123, 85, 0.24) 100%)',
+                        height: '64px',
+                        width: '64px',
+                        borderRadius: '50%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex',
+                        m: 'auto'
+                    }}>
+                        <ShoppingCartIcon sx={{ color: 'warning.thincolor' }} />
+                    </Box>
+                    <Typography component="div" variant="h3" color="warning.thincolor">
+                        6K
+                    </Typography>
+                    <Typography component="div" variant="h6" color="warning.thincolor">
+                        Total Weekly Orders
+                    </Typography>
                 </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Paper>
-                    Total Users
+                <Paper sx={{ bgcolor: 'error.thin', textAlign: 'center', p: 2, alignContent: 'center' }}>
+                    <Box sx={{ 
+                        background: 'linear-gradient(135deg, rgba(0, 123, 85, 0) 0%, rgba(0, 123, 85, 0.24) 100%)',
+                        height: '64px',
+                        width: '64px',
+                        borderRadius: '50%',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        display: 'flex',
+                        m: 'auto'
+                    }}>
+                        <MonetizationOnIcon sx={{ color: 'error.thincolor' }} />
+                    </Box>
+                    <Typography component="div" variant="h3" color="error.thincolor">
+                        300K
+                    </Typography>
+                    <Typography component="div" variant="h6" color="error.thincolor">
+                        Total Weekly Sales ($)
+                    </Typography>
                 </Paper>
+            </Grid>
+            <Grid item xs={12} sx={{ my: 4, }}>
+                <Divider light />
             </Grid>
             <Grid item xs={12} md={8}>
                 <TableContainer component={Paper}>

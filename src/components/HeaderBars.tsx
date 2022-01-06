@@ -55,9 +55,7 @@ export default function(){
               
               <Box sx={{ flexGrow: 0, }}>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p:0, }}>
-                  <Avatar>
-                    U
-                  </Avatar>
+                  <Avatar alt="U" src="rblimg.jpg" />
                 </IconButton>
                 <Menu
                   sx={{ mt: '45px', }}
